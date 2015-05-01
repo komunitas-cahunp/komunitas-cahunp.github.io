@@ -7,12 +7,12 @@ Kolaborasi Website Bebasis Git, Repo ini merupakan website statis Komunitas CAH 
     bundle install
     bundle exec jekyll serve --watch
 
-_Note: Requires Ruby version 1.9.3 =>. For example use [rbenv](https://github.com/sstephenson/rbenv)_   
-    
+_Note: Requires Ruby version 1.9.3 =>. For example use [rbenv](https://github.com/sstephenson/rbenv)_
+
 ## Configuration
 Poskan sebuah tulisan/artikel dengan format `tahun-bulan-tanggal-judul-artikel.md` simpan file tersebut pada direktori `_post/`
 
-_Note: Ketika mengedit `tahun-bulan-tanggal-judul-artikel.md`, Ikuti format pada file - file post yang sudah ada_
+_Note: Ketika mengedit file posting `tahun-bulan-tanggal-judul-artikel.md`, Ikuti format pada file - file post yang sudah ada_
 
 ## Authors
 

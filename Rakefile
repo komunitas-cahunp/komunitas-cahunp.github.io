@@ -27,7 +27,7 @@ GITHUB_REPONAME = "komunitas-cahunp/komunitas-cahunp.github.io"
       Dir.chdir tmp
       system "git init"
       system "git add --all"
-      message = "Site updated at #{Time.now.utc+7}"
+      message = "Site updated at #{Time.now}"
       system "git commit -m #{message.inspect}"
       system "git remote add origin git@github.com:#{GITHUB_REPONAME}.git"
 #     system "git push origin master:refs/heads/gh-pages --force"
