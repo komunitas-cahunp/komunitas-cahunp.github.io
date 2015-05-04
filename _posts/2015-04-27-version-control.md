@@ -42,6 +42,7 @@ $ git config --global user.email "user@email.com"
 
 ### Perintah Dasar
 Berikut ini beberapa perintah dasar yang perlu diketahui ketika mengoperasikan Git Bash.
+
 * Perintah Operasi file dan direktory
 
 ```
@@ -79,13 +80,13 @@ Penjelasan lebih lanjut mengenai perintah diatas bisa merujuk pada link berikut 
 * Daftar Akun [GitHub.com](https://github.com/)
 * Bekerja menggunakan protokol *SSH*, untuk mengijinkan anda melakukan `clone`, `pull`, `Fetch`, dan `Push` menggunkan *URLs SSH.*
   - Generating *SSH-Keygen*
-    
+
     ```
     $ ssh-keygen -t rsa -C "alamat_email"
     $ ls ~/.ssh/
     ```
   - Kopi `id_rsa.pub`
-    
+
     ```
     $ clip < ~/.ssh/id_rsa.pub
     ```
@@ -99,7 +100,7 @@ Penjelasan lebih lanjut mengenai perintah diatas bisa merujuk pada link berikut 
     <div class="full zoomable"><img src="/images/new-repo-col.png"></div>
     Sumber Gambar-vc3 : (Włodzimierz Gajda: 332)<br \>
     Jika anda memutuskan untuk membuat file baru maka, anda lakukan perintah:
-    
+
     ```
     $ mkdir 12-03
     $ cd 12-03/
@@ -110,7 +111,7 @@ Penjelasan lebih lanjut mengenai perintah diatas bisa merujuk pada link berikut 
     $ git push -u origin master
     ```
     Jika anda memutuskan untuk mengkopi proyek yang sudah ada maka lakukan perintah:
-    
+
     ```
     $ git add --all
     $ git commit -m "Pesan Perubahan"
