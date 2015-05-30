@@ -14,7 +14,7 @@ author:
   image: cahunp-logo.png
 ---
 
-Sebagai perkenalan tentang apa yang team kcu tawarkan, kami sedikit ulas secara singkat satu-satu materinya. 
+Masih ada satu hari lagi besok hari Minggu, 31 Mei 2015, datanglah untuk tanya-tanya, dan team kcu siap menjelaskan, jangan lewatkan kesempatan belajar interaktif ini. Sebagai perkenalan tentang apa yang team kcu tawarkan, kami sedikit ulas secara singkat satu-satu materinya. 
 
 *Git* merupakan sebuah *version control* atau bisa juga disebut dengan *source code management*, sebagai asumsi ketika anda belajar sebuah pemrograman atau mengerjakan proyek pemrograman, dan anda ternyata mengerjakannya secara bersama-sama maka kami sarankan menggunkan *version control*, atau kebutuhan anda sebagai mahasiswa ketika mendapatkan tugas kelompok pemrograman maka saya sarankan pula.
 
