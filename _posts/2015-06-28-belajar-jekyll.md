@@ -13,5 +13,6 @@ author:
 ---
 
 Untuk Ikut menulis blog dikomunitas CAH UNP, yang perlu disiapkan yang pertama:
+
 * Daftar akun [Github](http://github.com)
 * *Forking* `https://github.com/komunitas-cahunp/komunitas-cahunp.github.io/fork`
