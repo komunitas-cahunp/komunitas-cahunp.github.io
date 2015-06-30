@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komunitas CAH UNP &mdash; Find a lot of friends with the same vision and mision for creative</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.png"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Komunitas CAH UNP" />
+    <meta name="title" content="Komunitas CAH UNP">
+    <link rel="canonical" href="http://cah.unpkediri.ac.id/feed.xml">
+     
+           
+    <meta property="og:title" content="Komunitas CAH UNP"/>
+    <meta property="og:url" content="http://cah.unpkediri.ac.id/feed.xml"/>
+    
+    
+    <meta property="og:site_name" content="Komunitas CAH UNP">     
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/logo.png" alt="Inc">
+            </a>
+            <a href="/" class="home">Blog</a>
+            <a href="/events/">Events</a>
+            <a href="/about/">About</a>
+        </nav>
+        <nav class="tagline">
+            <span>Competition is that we wait</span>
+            <a href="/events/" class="btn btn-outline">Learn More</a>
+        </nav>
+    </header>
+</section>
+
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>http://cah.unpkediri.ac.id</link>
+    <atom:link href="http://cah.unpkediri.ac.id/feed.xml" rel="self" type="application/rss+xml" />
+    <description></description>
+    <language>en-us</language>
+    <pubDate>Tue, 30 Jun 2015 23:45:42 +0700</pubDate>
+    <lastBuildDate>Tue, 30 Jun 2015 23:45:42 +0700</lastBuildDate>
+
+    
+    
+    <item>
+      <title>Belajar Jekyll</title>
+      <link>http://cah.unpkediri.ac.id/2015/06/28/belajar-jekyll/</link>
+      <pubDate>Sun, 28 Jun 2015 00:00:00 +0700</pubDate>
+      <author></author>
+      <guid>http://cah.unpkediri.ac.id/2015/06/28/belajar-jekyll</guid>
+      <description>&lt;h2&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;Tepat di waktu-waktu ngabuburit, anak-anak komunitas lagi ngumpul untuk belajar jekyll, apa itu jekyll? sudah dibahas di post &lt;a href=&quot;http://cah.unpkediri.ac.id/2015/04/25/ngopinya-komunitas/&quot;&gt;Ngopinya Komunitas&lt;/a&gt;. Nah, karena blog komunitas dibuat menggunakan jekyll, maka sebagai asumsi untuk belajar jekyll, dengan cara ikut menulis blog di Komunitas CAH UNP. Yang perlu disiapkan adalah:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Daftar akun &lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Buka &lt;a href=&quot;https://github.com/komunitas-cahunp/komunitas-cahunp.github.io/&quot;&gt;Repository&lt;/a&gt;, selanjutnya &lt;a href=&quot;https://github.com/komunitas-cahunp/komunitas-cahunp.github.io/fork&quot;&gt;Forking&lt;/a&gt; ke akun pribadi anda.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://help.github.com/articles/generating-ssh-keys/&quot;&gt;Generating SSH-Keygen&lt;/a&gt; dan ikuti panduan hingga selesai.&lt;/li&gt;
+&lt;li&gt;Buka Git Bash:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;  $ git clone git@github.com:&amp;lt;username&amp;gt;/komunitas-cahunp.github.io.git
+  $ cd komunitas-cahunp.github.io/
+  $ touch _post/tahun-bulan-tanggal-judul-artikel.md
+  $ sublime _post/tahun-bulan-tanggal-judul-artikel.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To be continue... sabtu depan, Insya Allah.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Upload File Menggunakan NodeJS</title>
+      <link>http://cah.unpkediri.ac.id/2015/06/08/upload-file-menggunakan-nodejs/</link>
+      <pubDate>Mon, 08 Jun 2015 00:00:00 +0700</pubDate>
+      <author></author>
+      <guid>http://cah.unpkediri.ac.id/2015/06/08/upload-file-menggunakan-nodejs</guid>
+      <description>&lt;h3&gt;Overview&lt;/h3&gt;
+
+&lt;p&gt;Pastikan mesin komputer anda sudah terinstall nodeJS, download dan install &lt;a href=&quot;https://nodejs.org&quot;&gt;nodeJS&lt;/a&gt;, pembahasan ini akan membahas bagaimana &lt;em&gt;upload file&lt;/em&gt; menggunakan &lt;a href=&quot;https://github.com/LienJS/Lien&quot;&gt;lien&lt;/a&gt; dan &lt;a href=&quot;https://github.com/felixge/node-formidable&quot;&gt;formidable&lt;/a&gt;, setelah membuat server HTTP NodeJS.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;line&lt;/em&gt; adalah Framework mungil tingkat-tinggi yang digunakan untuk membuat server HTTP, sedangkan &lt;em&gt;formidable&lt;/em&gt; adalah modul NodeJS untuk menguraikan data formulir dan upload file.&lt;/p&gt;
+
+&lt;h3&gt;Pembahasan&lt;/h3&gt;
+
+&lt;p&gt;Pertama-tama, membuat struktur direktory:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;# buat direktori proyek
+$ mkdir file-upload
+
+# masuklah kedalam direktori proyek
+$ cd file-upload
+
+# membuat direktori public dan uploads
+$ mkdir -p public/uploads
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Berikutnya anda harus meng-instal dependencies:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;$ npm i fomidable@1.0.17 lien@0.0.8
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Membuat file &lt;code&gt;index.html&lt;/code&gt; kedalam direktori &lt;code&gt;public&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+  &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
+  &amp;lt;title&amp;gt;File Upload&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;form action=&amp;quot;/upload&amp;quot; method=&amp;quot;post&amp;quot; enctype=&amp;quot;multipart/form-data&amp;quot;&amp;gt;
+    &amp;lt;input name=&amp;quot;file&amp;quot; type=&amp;quot;file&amp;quot;&amp;gt;
+    &amp;lt;button&amp;gt;Submit&amp;lt;/button&amp;gt;
+  &amp;lt;/form&amp;gt;
+  &amp;lt;iframe src=&amp;quot;/upload/list&amp;quot; frameborder=&amp;quot;0&amp;quot;&amp;gt;&amp;lt;/iframe&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ini adalah halaman &lt;code&gt;HTML&lt;/code&gt; yang berisi file bentuk formulir upload dan elemen &lt;code&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt; yang akan mendaftar file yang di upload (&lt;code&gt;uploads/list&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;Dan sekarang sisi server: &lt;code&gt;index.js&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;// Dependensies
+var Lien = require(&amp;quot;lien&amp;quot;)
+  , Fs = require(&amp;quot;fs&amp;quot;)
+  , Formidable = require(&amp;quot;formidable&amp;quot;)
+  ;
+
+// Constans
+const DIR_UPLOADS = __dirname + &amp;quot;/public/uploads/&amp;quot;;
+
+// Init lien Server
+var server = new Lien({
+    host: &amp;quot;localhost&amp;quot;
+  , port: 9000
+
+});
+
+// Add Page
+server.page.add(&amp;quot;/&amp;quot;, function (lien){
+  lien.file(&amp;quot;/index.html&amp;quot;);
+});
+
+//Upload 
+server.page.add(&amp;quot;/upload$&amp;quot;, function (lien){
+  var form = new Formidable.IncomingForm(
+    {uploadDir: DIR_UPLOADS}
+    );
+  form.parse(lien.req, function (err, fields, files){
+    if (!files.file) {
+      return lien.end(&amp;quot;File is missing.&amp;quot;, 400);
+    }
+    Fs.rename(files.file.path, DIR_UPLOADS + files.file.name, function (err){
+      if (err) {
+        return lien.end(err, 400);
+      }
+      lien.redirect(&amp;quot;/&amp;quot;);
+    });
+  });
+});
+
+// List
+server.page.add(&amp;quot;/upload/list&amp;quot;, function (lien){
+  Fs.readdir(DIR_UPLOADS, function  (err, files) {
+    if (err) {return lien.end(err, 500);}
+    files = files.filter(function(c){
+      return c !== &amp;quot;.gitignore&amp;quot;;
+    });
+    var list = [&amp;quot;&amp;lt;ul&amp;gt;&amp;quot;, files.map(function(c){
+      return[&amp;quot;&amp;lt;li&amp;gt;&amp;quot;, &amp;quot;&amp;lt;a target=&amp;#39;blank&amp;#39; href=&amp;#39;/uploads/&amp;quot;, c, &amp;quot;&amp;#39;&amp;gt;&amp;quot;, c, &amp;quot;&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;&amp;quot;].join(&amp;quot;&amp;quot;);
+      }).join(&amp;quot;&amp;quot;), &amp;quot;&amp;lt;/ul&amp;gt;&amp;quot;].join(&amp;quot;&amp;quot;);
+      lien.end(list);
+  });
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Dan begitu saja, server akan berjalan pada &lt;code&gt;localhost:9000&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;node index.js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Buka &lt;code&gt;localhost:9000&lt;/code&gt; dan dimana anda bisa upload file dan melihat sebuah daftar upload sebelumnya:&lt;/p&gt;
+
+&lt;div class=&quot;full zoomable&quot;&gt;&lt;img src=&quot;/images/upload.png&quot;&gt;&lt;/div&gt;
+
+&lt;h3&gt;Sumber&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Bizău, Ionică,  2015. &lt;em&gt;Upload files using NodeJS&lt;/em&gt;, (online). tersedia: &lt;a href=&quot;http://ionicabizau.net/blog/22-upload-files-using-nodejs&quot;&gt;http://ionicabizau.net/blog/22-upload-files-using-nodejs&lt;/a&gt;. diakses 06 Juni 2015.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Stand Pameran KCU at DN FT 2015</title>
+      <link>http://cah.unpkediri.ac.id/2015/05/30/pameran-komunitas-cah-unp/</link>
+      <pubDate>Sat, 30 May 2015 00:00:00 +0700</pubDate>
+      <author></author>
+      <guid>http://cah.unpkediri.ac.id/2015/05/30/pameran-komunitas-cah-unp</guid>
+      <description>&lt;p&gt;Masih ada satu hari lagi besok hari Minggu, 31 Mei 2015, datanglah untuk tanya-tanya, dan team kcu siap menjelaskan, jangan lewatkan kesempatan belajar interaktif ini. Sebagai perkenalan tentang apa yang team kcu tawarkan, kami sedikit ulas secara singkat satu-satu materinya. &lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Git&lt;/em&gt; merupakan sebuah &lt;em&gt;version control&lt;/em&gt; atau bisa juga disebut dengan &lt;em&gt;source code management&lt;/em&gt;, sebagai asumsi ketika anda belajar sebuah pemrograman atau mengerjakan proyek pemrograman, dan anda ternyata mengerjakannya secara bersama-sama maka kami sarankan menggunkan &lt;em&gt;version control&lt;/em&gt;, atau kebutuhan anda sebagai mahasiswa ketika mendapatkan tugas kelompok pemrograman maka saya sarankan pula.&lt;/p&gt;
+
+&lt;p&gt;Yang berikutnya &lt;em&gt;IDS&lt;/em&gt;, &lt;em&gt;IDS&lt;/em&gt; merupakan singkatan dari &lt;em&gt;Intrution Detection System&lt;/em&gt;, sebuah metode yang digunakan untuk mengenali/mendeteksi serangan pada jaringan. Serangan yang dimaksud adalah berupa percobaan penerobosan terhadap jaringan, dapat berupa &lt;em&gt;malware&lt;/em&gt; ataupun aktifitas &lt;em&gt;hacking&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ketiga &lt;em&gt;VoIP&lt;/em&gt;, &lt;em&gt;VoIP&lt;/em&gt; singkatan dari &lt;em&gt;Voice Over Internet Protocol&lt;/em&gt; merupakan &lt;em&gt;server&lt;/em&gt; sentral telepon yang berkomunikasi melalui jaringan &lt;em&gt;wifi&lt;/em&gt;. disini kami menggunakan &lt;em&gt;trixbox&lt;/em&gt; sebagai &lt;em&gt;server&lt;/em&gt;-nya yang di lengkapi &lt;em&gt;feature PBX&lt;/em&gt; yang berfungsi sebagai konfigurasi &lt;em&gt;extention&lt;/em&gt;, di dalam konfigurasi ini terseting &lt;em&gt;user display client&lt;/em&gt;, Untuk &lt;em&gt;client&lt;/em&gt; anda dapat menggunakan &lt;em&gt;smart phone android&lt;/em&gt; dengan men-setting &lt;em&gt;phone&lt;/em&gt; dengan panggilan &lt;em&gt;SIP&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Yang Keempat &lt;a href=&quot;https://setiathome.berkeley.edu&quot;&gt;&lt;em&gt;Seti@Home&lt;/em&gt;&lt;/a&gt;, &lt;em&gt;Seti@Home&lt;/em&gt; atau SETI (&lt;em&gt;Search for Extra-Terrestrial Intelligence&lt;/em&gt;) merupakan program yang dapat diunduh dan digunakan dalam komputer individu untuk mencari sinyal-sinyal radio dari dunia atau planet-planet dengan kehidupan &amp;quot;alien&amp;quot;. Ia merupakan proyek komputasi terdistribusi yang (mungkin) paling terkenal yang berjalan pada platform &lt;em&gt;BOINC&lt;/em&gt; (&lt;em&gt;Berkeley Open Infrastructure for Network Computing&lt;/em&gt;) yang memungkinkan &lt;em&gt;user&lt;/em&gt; memanfaatkan komputer mereka saat sedang &lt;em&gt;idle&lt;/em&gt; untuk penelitian ilmiah.&lt;/p&gt;
+
+&lt;p&gt;Ini nih stand kami
+&lt;div class=&quot;full zoomable&quot;&gt;&lt;img src=&quot;/images/stand-kcu.jpg&quot;&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;Welcome and join with me.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Version Control</title>
+      <link>http://cah.unpkediri.ac.id/2015/04/27/version-control/</link>
+      <pubDate>Mon, 27 Apr 2015 00:00:00 +0700</pubDate>
+      <author></author>
+      <guid>http://cah.unpkediri.ac.id/2015/04/27/version-control</guid>
+      <description>&lt;p&gt;Ada sekitar belasan sebuah aplikasi version control, diantaranya Bazar, BitKeeper,
+Subversion, Git dan lainnya. Scott Scacon (2009:1) Penulis Buku ProGit mengatakan &amp;quot; &lt;em&gt;Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.&lt;/em&gt;&amp;quot;
+Yang pada kali ini saya akan membahas version control
+Git, mulai dari :&lt;/p&gt;
+
+&lt;h3&gt;Setup dan Usage&lt;/h3&gt;
+
+&lt;p&gt;Download Git dari sumbernya :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://msysgit.github.com/&quot;&gt;Windows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.kernel.org/pub/software/scm/git/&quot;&gt;Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://git-scm.com/download/mac&quot;&gt;Mac OS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Untuk melihat tahapan - tahapan setup, bisa merujuk pada link berikut :
+&lt;code&gt;https://github.com/komunitas-cahunp/installGit&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3&gt;Konfigurasi Awal&lt;/h3&gt;
+
+&lt;p&gt;Untuk melakukan konfigurasi awal ikuti perintah berikut, konfigurasi awal ini di lakukan hanya sekali
+untuk &lt;em&gt;global&lt;/em&gt;-nya, sedangkan untuk konfigurasi per-&lt;code&gt;project&lt;/code&gt; atau disebut dengan konfigurasi lokal ini sifatnya opsional
+bisa di konfigurasi bisa tidak.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ git config --global user.name &amp;quot;Nama Lengkap&amp;quot;
+$ git config --global user.email &amp;quot;user@email.com&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Perintah Dasar&lt;/h3&gt;
+
+&lt;p&gt;Berikut ini beberapa perintah dasar yang perlu diketahui ketika mengoperasikan Git Bash.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Perintah Operasi file dan direktory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ touch
+$ cp
+$ rm
+$ mv
+$ mkdir
+$ rm -rf
+$ cd
+$ ls
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Perintah &lt;em&gt;Local Repository&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ git init
+$ git add
+$ git commit
+$ git remote
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Perintah Kolaborasi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ git clone
+$ git pull
+$ git push
+$ git fetch
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Penjelasan lebih lanjut mengenai perintah diatas bisa merujuk pada link berikut :
+&lt;code&gt;https://www.gitbook.com/book/saifulindo/contekan-git/details&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Bekerja dengan &lt;code&gt;GitHub.com&lt;/code&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Daftar Akun &lt;a href=&quot;https://github.com/&quot;&gt;GitHub.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Bekerja menggunakan protokol &lt;em&gt;SSH&lt;/em&gt;, untuk mengijinkan anda melakukan &lt;code&gt;clone&lt;/code&gt;, &lt;code&gt;pull&lt;/code&gt;, &lt;code&gt;Fetch&lt;/code&gt;, dan &lt;code&gt;Push&lt;/code&gt; menggunkan &lt;em&gt;URLs SSH.&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Generating &lt;em&gt;SSH-Keygen&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ ssh-keygen -t rsa -C &amp;quot;alamat_email&amp;quot;
+$ ls ~/.ssh/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Kopi &lt;code&gt;id_rsa.pub&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ clip &amp;lt; ~/.ssh/id_rsa.pub
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;Tambahkan &lt;code&gt;public_key&lt;/code&gt; ke akun GitHub.com
+&lt;div class=&quot;full zoomable&quot;&gt;&lt;img src=&quot;/images/ssh-key.png&quot;&gt;&lt;/div&gt;
+Sumber Gambar-vc1: (Włodzimierz Gajda: 329)&lt;/li&gt;
+&lt;li&gt;Buat &lt;em&gt;Repository&lt;/em&gt; Baru
+&lt;div class=&quot;full zoomable&quot;&gt;&lt;img src=&quot;/images/new-repo.png&quot;&gt;&lt;/div&gt;
+Sumber Gambar-vc2 : (Włodzimierz Gajda: 331)&lt;/li&gt;
+&lt;li&gt;Kopi proyek yang sudah ada atau buat file baru contoh : &lt;code&gt;README.md&lt;/code&gt;
+&lt;div class=&quot;full zoomable&quot;&gt;&lt;img src=&quot;/images/new-repo-col.png&quot;&gt;&lt;/div&gt;
+Sumber Gambar-vc3 : (Włodzimierz Gajda: 332)&lt;br \&gt;
+Jika anda memutuskan untuk membuat file baru maka, anda lakukan perintah:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ mkdir 12-03
+$ cd 12-03/
+$ touch README.md
+$ git add README.md
+$ git commit -m &amp;quot;Pesan Perubahan&amp;quot;
+$ git remote add origin git@github.com:&amp;lt;username&amp;gt;/12-03.git
+$ git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Jika anda memutuskan untuk mengkopi proyek yang sudah ada maka lakukan perintah:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;$ git add --all
+$ git commit -m &amp;quot;Pesan Perubahan&amp;quot;
+$ git remote add origin git@github.com:&amp;lt;username&amp;gt;/12-03.git
+$ git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Oke Selesai, Semoga bermanfaat, jika ada pertanyaan buatlah diskusi dan persoalan di alamat :
+&lt;code&gt;https://github.com/komunitas-cahunp/komunitas-cahunp.github.io/issues&lt;/code&gt; dengan judul: &lt;strong&gt;Post Version Control #Subtitle-issue&lt;/strong&gt;, contoh :&lt;code&gt;Post Version Control #Perintah git pull&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;Sumber&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Włodzimierz, Gajda, 2013. &lt;em&gt;Git Recipes - A Problem-Solution Approach&lt;/em&gt;, Poland:Apress.&lt;/li&gt;
+&lt;li&gt;Scott, Chacon, 2009. &lt;em&gt;Pro Git&lt;/em&gt;, &lt;a href=&quot;https://github.s3.amazonaws.com/media/progit.en.pdf&quot;&gt;https://github.s3.amazonaws.com/media/progit.en.pdf&lt;/a&gt;, Visited 01/05/2015.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Ngopinya Komunitas &mdash; NK.1</title>
+      <link>http://cah.unpkediri.ac.id/2015/04/25/ngopinya-komunitas/</link>
+      <pubDate>Sat, 25 Apr 2015 00:00:00 +0700</pubDate>
+      <author></author>
+      <guid>http://cah.unpkediri.ac.id/2015/04/25/ngopinya-komunitas</guid>
+      <description>&lt;p&gt;Singkat cerita,.... Datanglah sebuah sms untuk kumpul hari sabtu, yang agendanya bersih - bersih markas, datanglah teman-teman satu per satu di akhir pukul enambelas. Dilaksankanlah bersih - bersih, yang tadinya ruangan kacau balau sekarang menjadi bersih dan nyaman, waktu semakin gelap yang mana tempat semakin tidak memungkinkan, lampu tidak menyala. &lt;/p&gt;
+
+&lt;p&gt;Berpindahlah lokasi ngobrol yang telah disepakati yaitu di &lt;strong&gt;ST&lt;/strong&gt;, pesan kopi dan gorengan untuk memperpanjang waktu diskusi, buka laptop sedikit membahas &lt;strong&gt;jekyll&lt;/strong&gt;, yaitu &lt;em&gt;jekyll&lt;/em&gt; merupakan sebuah alat yang digunakan untuk menstransform teks biasa ke website atau blog statis[1].&lt;/p&gt;
+
+&lt;p&gt;Hasil diskusi kira - kira yang pertama bagaimana website komunitas bisa lebih aktif, kedua membahas materi tentang jekyll, yang ketiga ngobrol ngalor ngidul ndak jelas, karena senjata sudah habis, kita putuskan untuk pulang.&lt;/p&gt;
+
+&lt;div class=&quot;full zoomable&quot;&gt;&lt;img src=&quot;/images/gaya-ngopi-warga-ibu-kota-dari-kafe-hingga-trotoar.jpg&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;Sumber Gambar : &lt;a href=&quot;http://santriringinagung.blogspot.com/2013/06/ngopi-ala-santri.html&quot;&gt;santriringinagung&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;sumber&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;[1] &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;http://jekyllrb.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>All Events</title>
+      <link>http://cah.unpkediri.ac.id/events/</link>
+      <pubDate>Sun, 12 Apr 2015 00:00:00 +0700</pubDate>
+      <author></author>
+      <guid>http://cah.unpkediri.ac.id/Events</guid>
+      <description>&lt;h2&gt;Workshop Android&lt;/h2&gt;
+
+&lt;p&gt;Diklat dan Uji Sertifikasi Uji Sertifikasi Kometensi Pemrograman Android dengan APP Inventor, Teknik Komputer dan Jaringan SMK Negeri 1 Kediri.
+Ini foto ketua KCU Periode Sekarang.
+&lt;div class=&quot;full zoomable&quot;&gt;&lt;img src=&quot;/images/w-android-1.JPG&quot;&gt;&lt;/div&gt;
+Ini fotonya mas Deni sama mas Rizal
+&lt;div class=&quot;full zoomable&quot;&gt;&lt;img src=&quot;/images/w-android-2.JPG&quot;&gt;&lt;/div&gt;
+Ini Mas Ketua dan mas Deni.
+&lt;div class=&quot;full zoomable&quot;&gt;&lt;img src=&quot;/images/w-android-3.JPG&quot;&gt;&lt;/div&gt;
+&lt;em&gt;Kegiatan Mei 2015&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2&gt;Workshop Version Control&lt;/h2&gt;
+
+&lt;p&gt;Berbagai kebutuhan dan permasalahan yeng muncul ke permukaan, seperti kebutuhan media belajar bersama yang terdistribusi, media untuk ngoding bareng, diskusi sehingga diadakannya pelatihan git source code management, berikut kami menggambarkannya :
+&lt;div class=&quot;full zoomable&quot;&gt;&lt;img src=&quot;/images/scm.jpg&quot;&gt;&lt;/div&gt;
+&lt;em&gt;Kegiatan Juni 2014&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2&gt;Pertahanan Siber Nasional&lt;/h2&gt;
+
+&lt;p&gt;Ikut serta komunitas CAH UNP dalam kegiatan Standarisasi Keamanan Informasi yang diadakan oleh kementerian pertahanan, berikut kami menggambarkannya :
+&lt;div class=&quot;full zoomable&quot;&gt;&lt;img src=&quot;/images/psn.jpg&quot;&gt;&lt;/div&gt;
+&lt;em&gt;Kegiatan Oktober 2013&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2&gt;PNPM 2013&lt;/h2&gt;
+
+&lt;p&gt;PNPM merupakan kepanjangan dari Program Nusantara Pemberdayaan Masyarakan, kegiatan ini merupakan gabungan antara Komunitas CAH UNP dengan BEMFT, materi yang disampaikan tentang e-mail, social media, dan bloging. karena pelatihannya berada di daerah pegunungan sehingga sulit mendapatkan sinyal, maka dari itu kami membuat antena wajan bolic untuk memperkuat signal modem, berikut yang kami gambarkan:
+&lt;div class=&quot;full zoomable&quot;&gt;&lt;img src=&quot;/images/pnpm.jpg&quot;&gt;&lt;/div&gt;
+Tepatnya kegiatan ini di adakan di desa kalipang, kec. Grogol, Kab. Kediri. Pesertanya siswa - siswi SD kelas lima.
+&lt;div class=&quot;full zoomable&quot;&gt;&lt;img src=&quot;/images/pnpm-nd.jpg&quot;&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;h2&gt;PHBD 2012&lt;/h2&gt;
+
+&lt;p&gt;PHBD merupakan kepanjangan dari Program Hibah Bina Desa yang di adakan oleh dikti setiap satu tahun sekali. kami mencoba mengikuti event ini dengan judul &lt;strong&gt;Membangun Central Telepon OpenBTS di Dusun Kali Nanas&lt;/strong&gt;, berikut adalah topologi yang kami gambarkan:
+&lt;div class=&quot;full zoomable&quot;&gt;&lt;img src=&quot;/images/phbd.jpg&quot;&gt;&lt;/div&gt;
+&lt;em&gt;Kegiatan November 2012&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2&gt;ShareJar To Esemka&lt;/h2&gt;
+
+&lt;p&gt;Event shareJar to esemka adalah sebuah kegiatan yang berbagi materi pelatihan jaringan komputer kepada siswa - siswi SMK, kegiatan ini pada waktu itu dilaksanakan sekitar bulan september 2012, team komunitas ada lima anak, materi yang disampaikan bertemakan &lt;strong&gt;membangun server berbasis linux clearOS&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;pesertanya dari smk sekarisidanan kediri, kami memberi apresiasi kepada siswa siswi SMKN 2 Kediri, yang memenangkan kuis.
+&lt;div class=&quot;full zoomable&quot;&gt;&lt;img src=&quot;/images/sharejar-to-esemka.jpg&quot;&gt;&lt;/div&gt;
+Like this....!! &lt;em&gt;Kegiatan September 2012&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>About Me</title>
+      <link>http://cah.unpkediri.ac.id/about/</link>
+      <pubDate>Sun, 12 Apr 2015 00:00:00 +0700</pubDate>
+      <author></author>
+      <guid>http://cah.unpkediri.ac.id/About</guid>
+      <description>&lt;h1&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;Pada awalnya komunitas CAH UNP, merupakan  Rencana Kegiatan Tahunan HIMADITI (Himpunan Mahasiswa Prodi TI) periode 2010/2011 dengan nama kegiatan Study Club, yang kemudian kami susun konsep proposal kegiatannya, sehingga menjadi Komunitas CAH UNP, dan pada periode 2012/2013 kepengurusan komunitas CAH UNP di lanjutkan oleh BEM FT, karena anggota dari komunitas sudah melebar ada yang dari Sistem Informasi dan Teknik Informatika, siapa saja yang menjadi kepengurusan komunitas itu sama saja yang terpenting kita adalah tim.&lt;/p&gt;
+
+&lt;h2&gt;Visi&lt;/h2&gt;
+
+&lt;p&gt;Membangun Semangat Mahasiswa melek TIK yang berkerja TIM&lt;/p&gt;
+
+&lt;h2&gt;Misi&lt;/h2&gt;
+
+&lt;p&gt;menciptakan produk karya bidang TIK serta untuk mengikuti ajang perlombaan tingkat nasional maupun interneasional yang di adakan oleh suatu organisasi ataupun Pemerintah. &lt;/p&gt;
+
+&lt;h2&gt;Tujuan&lt;/h2&gt;
+
+&lt;p&gt;Membantu dan Menciptakan SDM yang Berkualitas, dan Berdedikasi berdasarkan IPTEK&lt;/p&gt;
+
+&lt;p&gt;Mencetak Mahasiswa yang dapat berlomba di kancah Nasional di bidang Teknologi Informasi dan Komunikasi.&lt;/p&gt;
+
+&lt;p&gt;Mendidik Mahasiwa Fakultas Teknik untuk berkerjasama, mengembangkan potensi, dan Meraih juara bersama&lt;/p&gt;
+
+&lt;h1&gt;Contact&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Web : &lt;a href=&quot;http://cah.unpkediri.ac.id&quot;&gt;http://cah.unpkediri.ac.id&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;e-mail : &lt;a href=&quot;mailto:cah@unpkediri.ac.id&quot;&gt;cah@unpkediri.ac.id&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;twitter : &lt;a href=&quot;https://twitter.com/cahunp&quot;&gt;@cahunp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Groups : &lt;a href=&quot;https://www.facebook.com/groups/cahunp/&quot;&gt;cahunp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Mengatasi kesalahan saat konfigurasi DNS Server</title>
+      <link>http://cah.unpkediri.ac.id/2014/08/15/mengatasi-kesalahan-dns-server/</link>
+      <pubDate>Fri, 15 Aug 2014 00:00:00 +0700</pubDate>
+      <author></author>
+      <guid>http://cah.unpkediri.ac.id/2014/08/15/mengatasi-kesalahan-dns-server</guid>
+      <description>&lt;p&gt;Ditengah kesibukan mengerjakan tugas akhir dan ada beberapa kesibukan lainya saya sempetin nulis di komunitas tercinta ini. Langsung saja temen2, kali ini saya akan posting bagaimana mengatasi kesalahan saat temen2 mencoba Konfigurasi DNS Server dengan Bind. DNS Server adalah metode untuk mengkonversikan IP Address suatu komputer ke dalam suatu nama domain, ataupun sebaliknya. Dengan adanya DNS Server dapat memudahkan kita untuk mengakses IP suatu komputer/website dengan mengetikan nama domain bukan lagi IP Address. Misal saya punya komputer dengan IP Address 192.168.56.10 dengan adanya dns kalian tinggal ketik di browser misal (rocksyd.net).&lt;/p&gt;
+
+&lt;p&gt;Nah ketika saya mencoba menginstall DNS Server dan mengkonfigurasinya. Saya mendapatkan kendala saat restart Bind seperti yang terlihat pada gambar berikut.
+&lt;div class=&quot;full zoomable&quot;&gt;&lt;img src=&quot;/images/kendala-restart-bind.png&quot;&gt;&lt;/div&gt;
+untuk melihat kesalahan saat restart bind tersebut, coba ketikkan pada terminal sobat seperti ini.
+&lt;div class=&quot;full zoomable&quot;&gt;&lt;img src=&quot;/images/named-g-p-53.png&quot;&gt;&lt;/div&gt;
+oke. Dari keterangan log tersebut terlihat bahwa kesalahan ada file &lt;code&gt;/etc/bind/named.conf&lt;/code&gt; yaitu pada &lt;code&gt;;&lt;/code&gt; sebelum &lt;code&gt;zone&lt;/code&gt;. Lalu coba cek pada &lt;code&gt;/etc/bind/named.conf&lt;/code&gt; dengan editor file kesangan anda. Misal :
+&lt;code&gt;root@snort-ids:~# nano /etc/bind/named.conf&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Kalau sudah, coba sobat restart bind
+&lt;code&gt;root@snort-ids:~# service bind9 restart&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;lalu lihat hasilnya.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Sekilas Tentang PHBD 2014</title>
+      <link>http://cah.unpkediri.ac.id/2014/05/15/tentang-phbd-2014/</link>
+      <pubDate>Thu, 15 May 2014 00:00:00 +0700</pubDate>
+      <author></author>
+      <guid>http://cah.unpkediri.ac.id/2014/05/15/tentang-phbd-2014</guid>
+      <description>&lt;p&gt;Saya teringat dengan pelatihan kepemimpinan yang saya ikuti  sekitar 4 tahun yang lalu yang di adakan oleh BEM U, yang  pada waktu itu presmanya mahasiswa PKn Sdr. Prayoga. yang mana saya mengikuti atas wakil dari UKM Adab dan latihan kepemimpinan lain yang pernah saya ikuti. secara umum pembahasan yang sering di ungkapkan adalah tentang organisasi, hard skill, soft skill, apa itu mahasiswa, mahasiswa itu bukan siswa lagi dan semisalnya.&lt;/p&gt;
+
+&lt;p&gt;Kalimat hard skill maka ini hubungannya dengan pengetahuan yang dipelajari, sedangkan soft skill ini didapat dari pengebangan karakter, saya tertarik dengan kalimat soft skill ini,  bahwa keahlian soft skill ini dapat di asah melalui berbagai cara termasuk mengikuti organisasi, saya menggaris bawahi bahwa soft skill itu merupakan sesuatu yang timbul dari diri mahasiswa dan atau seseorang atas sikap prihatin atas  keadaan yang timbul dari sekitar yang butuh penyelesaian segera, kemudian merasa dibutuhkan (berupaya untuk berkontribusi) oleh orang lain dalam istilah lain mengusahakan bagaimana pengetahuan yang  di miliki dapat di bagi kepada orang yang lebih luas.&lt;/p&gt;
+
+&lt;p&gt;Banyak cara untuk mengembangkan soft skill, dan banyak pula sesuatu yang bermanfaat yang di dapat dari mengembangkan softskill. salah satu diantaranya mengikuti program hibah bina desa yang diselenggarakan oleh dikti. Pada latar belakang panduan PHBD 2014 di katakan bahwa mahasiswa yang berkualitas adalah mahasiswa yang memiliki multi kecerdasan, yaitu kecerdasan intelektual, emosional, spiritual, dan sosial. maka karena itu, proses pembelajaran perguruan tinggi harus mampu mengembangkan soft skil dan hard skill mahasiswa serta mampu membangkitkan, menumbuhkan, mengembangkan berbagai dimensi kecerdasan berikut.&lt;/p&gt;
+
+&lt;p&gt;Judul PHBD yang pernah saya usulkan :&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Membangun Sentral Telepon Dusun Kalinanas Menggunakan OpenBTS. download &lt;a href=&quot;https://www.dropbox.com/s/gqlz53bq1y9j3bh/07.PKMT-UNP-2012_-_M._SAIFUL_MUKHAROM.pdf&quot;&gt;disini&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Metamorfosis Sumber Podang menjadi Sumber Programer. download &lt;a href=&quot;https://www.dropbox.com/s/oe5moss1817p2sc/Metamorfosis%20Sumber%20Podang%20menjadi%20Sumber%20Programer.pdf&quot;&gt;disini&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Cotoh judul yang bisa di usulkan :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Membangun Sentral Telepon Menggunakan VoIP di Desa …. (masalah : mahal biaya telepon, dibutuhkan oleh kepala desa untuk menginformasikan kepada bawahan dan atau menginformasikan antar dusun).&lt;/li&gt;
+&lt;li&gt;Membangun WC Umum yang Sehat dan Modern di Desa …. (masalah : banyak warga yang buang hajat di sungai, dan satu-satunya aliran sungai yang digunakan untuk mandi dan mencuci).&lt;/li&gt;
+&lt;li&gt;Membangun Pusat Kerajinan Aksesoris Penghias Rumah di Desa …. (masalah : banyak pengangguran di desa tersebut, terdapat banyak bahan kerajinan yang tidak di manfaatkan warga secara maksimal).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;beberapa contoh judul diatas mungkin dapat menginspirasikan teman – teman semua. untuk penjelasan lebih lengkap, Berikut saya lampirkan panduan hibah bina desa 2014 download &lt;a href=&quot;https://www.dropbox.com/sm/create/Panduan-Program-Hibah-Bina-Desa-2014.pdf&quot;&gt;disini&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;silahkan dipersiapkan persyaratan – persyaratan sesuai dengan panduan, kemudian silahkan mendaftar pada alamat &lt;a href=&quot;http://phbd.dikti.go.id&quot;&gt;http://phbd.dikti.go.id&lt;/a&gt; minimal 2 anggota utuk mengikuti  program tersebut.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Tipe Hp/Modem yang support dengan Gammu</title>
+      <link>http://cah.unpkediri.ac.id/2014/03/11/hp-modem-support-gammu/</link>
+      <pubDate>Tue, 11 Mar 2014 00:00:00 +0700</pubDate>
+      <author></author>
+      <guid>http://cah.unpkediri.ac.id/2014/03/11/hp-modem-support-gammu</guid>
+      <description>&lt;p&gt;Selamat siang temen2 KCU, Blogger Indonesia dan temen2 penggiat IT. Pada kesempatan kali ini kami ingin berbagi informasi mengenai tipe hp/modem yang support dengan salah satu aplikasi sms gateway yaitu Gammu.&lt;/p&gt;
+
+&lt;p&gt;Sudah tau kan, SMS Gateway?
+Bagi yang belum tahu, sms gateway merupakan sistem aplikasi yang digunakan untuk menerima ataupun mengirim sms. Dengan sms gateway kalian memungkinkan mengirim pesan melalu komputer dengan protokol TCP. Adapun fitur dari sms gateway yaitu :&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Auto Reply&lt;/li&gt;
+&lt;li&gt;Pengiriman Masal / Broadcast Message&lt;/li&gt;
+&lt;li&gt;Pengiriman terjadwal&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Nah setelah mengetahui apa itu sms gateway, mungkin anda bertanya apa itu Gammu. Gammu adalah salah satu tool untuk mengembangkan sms gateway, selain berbasis open source Gammu memiliki beberapa kelebihan.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Gammu dapat dijalan di windows maupun di Linux.&lt;/li&gt;
+&lt;li&gt;Gammu menggunakan database MySQL dan juga dapat menggunakan interface web-based.&lt;/li&gt;
+&lt;li&gt;Kabel data USB maupun Serial kompatibel dengan Gammu.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Kembali ke judul dari posting kali ini, tipe hp/modem apa saja yang support dengan Gammu. Ada lebih dari 2000 hp/modem yang support dengan Gammu. Berikut listnya, silakan di download &lt;a href=&quot;http://wammu.eu/phones/csv/&quot;&gt;disini&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+    
+    <item>
+      <title>Jekyll Incorporated Features</title>
+      <link>http://cah.unpkediri.ac.id/2013/10/08/incorporated/</link>
+      <pubDate>Tue, 08 Oct 2013 00:00:00 +0700</pubDate>
+      <author></author>
+      <guid>http://cah.unpkediri.ac.id/2013/10/08/incorporated</guid>
+      <description>&lt;p&gt;Incorporated provides a great typography, responsive design, author details, semantic markup and more.&lt;/p&gt;
+
+&lt;p&gt;You can set customize post covers, and other things directly in the post front matter:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;layout: post
+
+title: Jekyll Incorporated Features
+subtitle: &amp;quot;What&amp;#39;s in the box&amp;quot;
+
+# Setup post cover image in /images/
+cover_image: blog-cover.jpg
+
+excerpt: &amp;quot;Incorporated provides a great typography, responsive design, author details, semantic markup and more.&amp;quot;
+
+# Author details, including Google Plus authorship
+author:
+  name: Karri Saarinen
+  twitter: karrisaarinen
+  gplus: 100687498195339762535 
+  bio: Co-founder, Design
+  image: ks.jpg
+  
+# Keep it as draft, not published in index.html or feed.xml
+draft: false&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h4&gt;Configurable &amp;amp; Code Snipped Highlighting&lt;/h4&gt;
+
+&lt;p&gt;/assets/stylesheets/main.scss:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-scss&quot; data-lang=&quot;scss&quot;&gt;/* Bodytext font */
+$font: &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif;
+
+/* Font for headings */
+$fontheadings: &amp;quot;Droid Sans&amp;quot;, &amp;quot;Helvetica Neue&amp;quot;, Helvetica, Arial, sans-serif;
+
+/* Text colors */
+$text: #21272d;
+$textmuted: #848484;
+$accent: #2077b2;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;config.yml:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;inc:
+  # Blog Information
+  title:        &amp;quot;Jekyll Incorporated&amp;quot;
+  subtitle:     &amp;quot;Modern Jekyll based blog for companies&amp;quot;
+  cover_image:  blog-cover.jpg
+  
+  # Company information
+  company:      Incorporated
+  url:          http://incorporated.sendtoinc.com/
+  facebook:     sendtoinc
+  twitter:      sendtoinc
+  about_link:   https://sendtoinc.com/about/
+  
+  # Product Information
+  product_link: http://incorporated.sendtoinc.com/
+  tagline:      &amp;quot;Get a modern blog for your company&amp;quot;
+  
+  # Comments
+  disqus:
+    # Eg. &amp;quot;exampleblog&amp;quot; Set to false to disable comments
+    shortname:  false
+  
+  
+  # Sharing settings
+  sharing:
+    twitter:    false
+    facebook:   false
+    gplus:      false
+    hn:         false
+    
+  
+ # Analytics     
+  analytics:
+    google: 
+      # eg. &amp;#39;UA-123-12&amp;#39;
+      id:       false&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Zoomable images&lt;/strong&gt;
+&lt;div class=&quot;full zoomable&quot;&gt;&lt;img src=&quot;/images/incorporated.jpg&quot;&gt;&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Awesome quotes&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;“Effective companies tend to communicate more, their people are curious and they have opinions”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Stay tuned for updates.&lt;/p&gt;
+</description>
+    </item>
+    
+    
+
+  </channel> 
+</rss>
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2015 
+        
+        <nav>
+            <a href="http://cah.unpkediri.ac.id/">KCU</a> &middot;
+            <a href="/">Blog</a> &middot;
+            <a href="/events/">Events</a> &middot; 
+            <a href="/about/">About</a>
+        </nav>
+        
+        <nav class="social">
+            
+            <a href="https://twitter.com/cahunp" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/groups/cahunp" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+                
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>KCU theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+
+
+  <!--google analytics tracking code here-->
+
+
+
+
+</body>
+</html>

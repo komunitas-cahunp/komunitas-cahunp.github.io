@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengatasi kesalahan saat konfigurasi DNS Server &mdash; Komunitas CAH UNP</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.png"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Komunitas CAH UNP" />
+    <meta name="title" content="Mengatasi kesalahan saat konfigurasi DNS Server ">
+    <link rel="canonical" href="http://cah.unpkediri.ac.id/2014/08/15/mengatasi-kesalahan-dns-server/">
+     
+           
+    <meta property="og:title" content="Mengatasi kesalahan saat konfigurasi DNS Server "/>
+    <meta property="og:url" content="http://cah.unpkediri.ac.id/2014/08/15/mengatasi-kesalahan-dns-server/"/>
+    
+    
+    <meta property="og:description" content="DNS Server adalah metode untuk mengkonversikan IP Address suatu komputer ke dalam suatu nama domain, ataupun sebaliknya."/>
+    <meta name="description" content="DNS Server adalah metode untuk mengkonversikan IP Address suatu komputer ke dalam suatu nama domain, ataupun sebaliknya."/>
+    
+    <meta property="og:site_name" content="Komunitas CAH UNP">     
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/logo.png" alt="Inc">
+            </a>
+            <a href="/" class="home">Blog</a>
+            <a href="/events/">Events</a>
+            <a href="/about/">About</a>
+        </nav>
+        <nav class="tagline">
+            <span>Competition is that we wait</span>
+            <a href="/events/" class="btn btn-outline">Learn More</a>
+        </nav>
+    </header>
+</section>
+
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="Rusit Affandy" target="_blank">Rusit Affandy</a></address> &mdash;
+                <time pubdate datetime="2014-15-August" title="August 15, 2014">August 15, 2014</time>
+            </div>
+            <h1 class="title">Mengatasi kesalahan saat konfigurasi DNS Server</h1>
+            <h2 class="subtitle">Domain Name System</h2>
+        </header>
+
+        <section>
+            <p>Ditengah kesibukan mengerjakan tugas akhir dan ada beberapa kesibukan lainya saya sempetin nulis di komunitas tercinta ini. Langsung saja temen2, kali ini saya akan posting bagaimana mengatasi kesalahan saat temen2 mencoba Konfigurasi DNS Server dengan Bind. DNS Server adalah metode untuk mengkonversikan IP Address suatu komputer ke dalam suatu nama domain, ataupun sebaliknya. Dengan adanya DNS Server dapat memudahkan kita untuk mengakses IP suatu komputer/website dengan mengetikan nama domain bukan lagi IP Address. Misal saya punya komputer dengan IP Address 192.168.56.10 dengan adanya dns kalian tinggal ketik di browser misal (rocksyd.net).</p>
+
+<p>Nah ketika saya mencoba menginstall DNS Server dan mengkonfigurasinya. Saya mendapatkan kendala saat restart Bind seperti yang terlihat pada gambar berikut.
+<div class="full zoomable"><img src="/images/kendala-restart-bind.png"></div>
+untuk melihat kesalahan saat restart bind tersebut, coba ketikkan pada terminal sobat seperti ini.
+<div class="full zoomable"><img src="/images/named-g-p-53.png"></div>
+oke. Dari keterangan log tersebut terlihat bahwa kesalahan ada file <code>/etc/bind/named.conf</code> yaitu pada <code>;</code> sebelum <code>zone</code>. Lalu coba cek pada <code>/etc/bind/named.conf</code> dengan editor file kesangan anda. Misal :
+<code>root@snort-ids:~# nano /etc/bind/named.conf</code></p>
+
+<p>Kalau sudah, coba sobat restart bind
+<code>root@snort-ids:~# service bind9 restart</code></p>
+
+<p>lalu lihat hasilnya.</p>
+
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="Mengatasi kesalahan saat konfigurasi DNS Server" data-related="cahunp">Tweet</a>
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               
+                <p>Written by <strong><a rel="author" href="https://twitter.com/" title="" target="_blank">Rusit Affandy</a></strong><br>
+                <span class="muted">http://read-me.tk/sample-page/</span>
+                </p>
+            </address>
+
+        </footer>
+
+        
+        <section>
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'cahunp'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+        </section>
+        
+    </div>
+</article>
+
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2015 
+        
+        <nav>
+            <a href="http://cah.unpkediri.ac.id/">KCU</a> &middot;
+            <a href="/">Blog</a> &middot;
+            <a href="/events/">Events</a> &middot; 
+            <a href="/about/">About</a>
+        </nav>
+        
+        <nav class="social">
+            
+            <a href="https://twitter.com/cahunp" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/groups/cahunp" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+                
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>KCU theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+
+
+  <!--google analytics tracking code here-->
+
+
+
+
+</body>
+</html>

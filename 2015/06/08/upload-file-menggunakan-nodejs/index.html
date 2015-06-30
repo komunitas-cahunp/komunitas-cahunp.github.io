@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File Menggunakan NodeJS &mdash; Komunitas CAH UNP</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.png"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Komunitas CAH UNP" />
+    <meta name="title" content="Upload File Menggunakan NodeJS ">
+    <link rel="canonical" href="http://cah.unpkediri.ac.id/2015/06/08/upload-file-menggunakan-nodejs/">
+     
+           
+    <meta property="og:title" content="Upload File Menggunakan NodeJS "/>
+    <meta property="og:url" content="http://cah.unpkediri.ac.id/2015/06/08/upload-file-menggunakan-nodejs/"/>
+    
+    
+    <meta property="og:description" content="Pastikan mesin komputer anda sudah terinstall nodeJS, download dan install [nodeJS](https://nodejs.org), pembahasan ini akan membahas bagaimana *upload file* menggunakan [lien](https://github.com/LienJS/Lien) dan [formidable](https://github.com/felixge/node-formidable), setelah membuat server HTTP NodeJS."/>
+    <meta name="description" content="Pastikan mesin komputer anda sudah terinstall nodeJS, download dan install [nodeJS](https://nodejs.org), pembahasan ini akan membahas bagaimana *upload file* menggunakan [lien](https://github.com/LienJS/Lien) dan [formidable](https://github.com/felixge/node-formidable), setelah membuat server HTTP NodeJS."/>
+    
+    <meta property="og:site_name" content="Komunitas CAH UNP">     
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/logo.png" alt="Inc">
+            </a>
+            <a href="/" class="home">Blog</a>
+            <a href="/events/">Events</a>
+            <a href="/about/">About</a>
+        </nav>
+        <nav class="tagline">
+            <span>Competition is that we wait</span>
+            <a href="/events/" class="btn btn-outline">Learn More</a>
+        </nav>
+    </header>
+</section>
+
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="M. Saiful Mukharom" target="_blank">M. Saiful Mukharom</a></address> &mdash;
+                <time pubdate datetime="2015-08-June" title="June 08, 2015">June 08, 2015</time>
+            </div>
+            <h1 class="title">Upload File Menggunakan NodeJS</h1>
+            <h2 class="subtitle">NodeJS dirancang untuk membangun aplikasi skala jaringan</h2>
+        </header>
+
+        <section>
+            <h3>Overview</h3>
+
+<p>Pastikan mesin komputer anda sudah terinstall nodeJS, download dan install <a href="https://nodejs.org">nodeJS</a>, pembahasan ini akan membahas bagaimana <em>upload file</em> menggunakan <a href="https://github.com/LienJS/Lien">lien</a> dan <a href="https://github.com/felixge/node-formidable">formidable</a>, setelah membuat server HTTP NodeJS.</p>
+
+<p><em>line</em> adalah Framework mungil tingkat-tinggi yang digunakan untuk membuat server HTTP, sedangkan <em>formidable</em> adalah modul NodeJS untuk menguraikan data formulir dan upload file.</p>
+
+<h3>Pembahasan</h3>
+
+<p>Pertama-tama, membuat struktur direktory:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"># buat direktori proyek
+$ mkdir file-upload
+
+# masuklah kedalam direktori proyek
+$ cd file-upload
+
+# membuat direktori public dan uploads
+$ mkdir -p public/uploads
+</code></pre></div>
+<p>Berikutnya anda harus meng-instal dependencies:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">$ npm i fomidable@1.0.17 lien@0.0.8
+</code></pre></div>
+<p>Membuat file <code>index.html</code> kedalam direktori <code>public</code>:</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;title&gt;File Upload&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;form action=&quot;/upload&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot;&gt;
+    &lt;input name=&quot;file&quot; type=&quot;file&quot;&gt;
+    &lt;button&gt;Submit&lt;/button&gt;
+  &lt;/form&gt;
+  &lt;iframe src=&quot;/upload/list&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+<p>Ini adalah halaman <code>HTML</code> yang berisi file bentuk formulir upload dan elemen <code>&lt;iframe&gt;</code> yang akan mendaftar file yang di upload (<code>uploads/list</code>).</p>
+
+<p>Dan sekarang sisi server: <code>index.js</code></p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript">// Dependensies
+var Lien = require(&quot;lien&quot;)
+  , Fs = require(&quot;fs&quot;)
+  , Formidable = require(&quot;formidable&quot;)
+  ;
+
+// Constans
+const DIR_UPLOADS = __dirname + &quot;/public/uploads/&quot;;
+
+// Init lien Server
+var server = new Lien({
+    host: &quot;localhost&quot;
+  , port: 9000
+
+});
+
+// Add Page
+server.page.add(&quot;/&quot;, function (lien){
+  lien.file(&quot;/index.html&quot;);
+});
+
+//Upload 
+server.page.add(&quot;/upload$&quot;, function (lien){
+  var form = new Formidable.IncomingForm(
+    {uploadDir: DIR_UPLOADS}
+    );
+  form.parse(lien.req, function (err, fields, files){
+    if (!files.file) {
+      return lien.end(&quot;File is missing.&quot;, 400);
+    }
+    Fs.rename(files.file.path, DIR_UPLOADS + files.file.name, function (err){
+      if (err) {
+        return lien.end(err, 400);
+      }
+      lien.redirect(&quot;/&quot;);
+    });
+  });
+});
+
+// List
+server.page.add(&quot;/upload/list&quot;, function (lien){
+  Fs.readdir(DIR_UPLOADS, function  (err, files) {
+    if (err) {return lien.end(err, 500);}
+    files = files.filter(function(c){
+      return c !== &quot;.gitignore&quot;;
+    });
+    var list = [&quot;&lt;ul&gt;&quot;, files.map(function(c){
+      return[&quot;&lt;li&gt;&quot;, &quot;&lt;a target=&#39;blank&#39; href=&#39;/uploads/&quot;, c, &quot;&#39;&gt;&quot;, c, &quot;&lt;/a&gt;&lt;/li&gt;&quot;].join(&quot;&quot;);
+      }).join(&quot;&quot;), &quot;&lt;/ul&gt;&quot;].join(&quot;&quot;);
+      lien.end(list);
+  });
+});
+</code></pre></div>
+<p>Dan begitu saja, server akan berjalan pada <code>localhost:9000</code>:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">node index.js
+</code></pre></div>
+<p>Buka <code>localhost:9000</code> dan dimana anda bisa upload file dan melihat sebuah daftar upload sebelumnya:</p>
+
+<div class="full zoomable"><img src="/images/upload.png"></div>
+
+<h3>Sumber</h3>
+
+<ul>
+<li>Bizău, Ionică,  2015. <em>Upload files using NodeJS</em>, (online). tersedia: <a href="http://ionicabizau.net/blog/22-upload-files-using-nodejs">http://ionicabizau.net/blog/22-upload-files-using-nodejs</a>. diakses 06 Juni 2015.</li>
+</ul>
+
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="Upload File Menggunakan NodeJS" data-related="cahunp">Tweet</a>
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="/images/Gz7G7rNc.jpg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/saifulindo" title="" target="_blank">M. Saiful Mukharom</a></strong><br>
+                <span class="muted">Teacher, Networking</span>
+                </p>
+            </address>
+
+        </footer>
+
+        
+        <section>
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'cahunp'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+        </section>
+        
+    </div>
+</article>
+
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2015 
+        
+        <nav>
+            <a href="http://cah.unpkediri.ac.id/">KCU</a> &middot;
+            <a href="/">Blog</a> &middot;
+            <a href="/events/">Events</a> &middot; 
+            <a href="/about/">About</a>
+        </nav>
+        
+        <nav class="social">
+            
+            <a href="https://twitter.com/cahunp" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/groups/cahunp" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+                
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>KCU theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+
+
+  <!--google analytics tracking code here-->
+
+
+
+
+</body>
+</html>

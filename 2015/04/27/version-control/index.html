@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Version Control &mdash; Komunitas CAH UNP</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.png"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="Komunitas CAH UNP" />
+    <meta name="title" content="Version Control ">
+    <link rel="canonical" href="http://cah.unpkediri.ac.id/2015/04/27/version-control/">
+     
+           
+    <meta property="og:title" content="Version Control "/>
+    <meta property="og:url" content="http://cah.unpkediri.ac.id/2015/04/27/version-control/"/>
+    
+    
+    <meta property="og:description" content="Scott Scacon (2009:1) Penulis Buku ProGit mengatakan <i>Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later</i>."/>
+    <meta name="description" content="Scott Scacon (2009:1) Penulis Buku ProGit mengatakan <i>Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later</i>."/>
+    
+    <meta property="og:site_name" content="Komunitas CAH UNP">     
+</head>
+<body>
+    
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/logo.png" alt="Inc">
+            </a>
+            <a href="/" class="home">Blog</a>
+            <a href="/events/">Events</a>
+            <a href="/about/">About</a>
+        </nav>
+        <nav class="tagline">
+            <span>Competition is that we wait</span>
+            <a href="/events/" class="btn btn-outline">Learn More</a>
+        </nav>
+    </header>
+</section>
+
+
+<article>
+
+    <div class="container">
+        <header>
+            <div class="meta">
+                By <address><a rel="author" href="" title="M. Saiful Mukharom" target="_blank">M. Saiful Mukharom</a></address> &mdash;
+                <time pubdate datetime="2015-27-April" title="April 27, 2015">April 27, 2015</time>
+            </div>
+            <h1 class="title">Version Control</h1>
+            <h2 class="subtitle">Source Code Management</h2>
+        </header>
+
+        <section>
+            <p>Ada sekitar belasan sebuah aplikasi version control, diantaranya Bazar, BitKeeper,
+Subversion, Git dan lainnya. Scott Scacon (2009:1) Penulis Buku ProGit mengatakan &quot; <em>Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.</em>&quot;
+Yang pada kali ini saya akan membahas version control
+Git, mulai dari :</p>
+
+<h3>Setup dan Usage</h3>
+
+<p>Download Git dari sumbernya :</p>
+
+<ul>
+<li><a href="https://msysgit.github.com/">Windows</a></li>
+<li><a href="https://www.kernel.org/pub/software/scm/git/">Linux</a></li>
+<li><a href="http://git-scm.com/download/mac">Mac OS</a></li>
+</ul>
+
+<p>Untuk melihat tahapan - tahapan setup, bisa merujuk pada link berikut :
+<code>https://github.com/komunitas-cahunp/installGit</code></p>
+
+<h3>Konfigurasi Awal</h3>
+
+<p>Untuk melakukan konfigurasi awal ikuti perintah berikut, konfigurasi awal ini di lakukan hanya sekali
+untuk <em>global</em>-nya, sedangkan untuk konfigurasi per-<code>project</code> atau disebut dengan konfigurasi lokal ini sifatnya opsional
+bisa di konfigurasi bisa tidak.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ git config --global user.name &quot;Nama Lengkap&quot;
+$ git config --global user.email &quot;user@email.com&quot;
+</code></pre></div>
+<h3>Perintah Dasar</h3>
+
+<p>Berikut ini beberapa perintah dasar yang perlu diketahui ketika mengoperasikan Git Bash.</p>
+
+<ul>
+<li>Perintah Operasi file dan direktory</li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ touch
+$ cp
+$ rm
+$ mv
+$ mkdir
+$ rm -rf
+$ cd
+$ ls
+</code></pre></div>
+<ul>
+<li>Perintah <em>Local Repository</em></li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ git init
+$ git add
+$ git commit
+$ git remote
+</code></pre></div>
+<ul>
+<li>Perintah Kolaborasi</li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ git clone
+$ git pull
+$ git push
+$ git fetch
+</code></pre></div>
+<p>Penjelasan lebih lanjut mengenai perintah diatas bisa merujuk pada link berikut :
+<code>https://www.gitbook.com/book/saifulindo/contekan-git/details</code>.</p>
+
+<h3>Bekerja dengan <code>GitHub.com</code></h3>
+
+<ul>
+<li>Daftar Akun <a href="https://github.com/">GitHub.com</a></li>
+<li><p>Bekerja menggunakan protokol <em>SSH</em>, untuk mengijinkan anda melakukan <code>clone</code>, <code>pull</code>, <code>Fetch</code>, dan <code>Push</code> menggunkan <em>URLs SSH.</em></p>
+
+<ul>
+<li>Generating <em>SSH-Keygen</em></li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ ssh-keygen -t rsa -C &quot;alamat_email&quot;
+$ ls ~/.ssh/
+</code></pre></div>
+<ul>
+<li>Kopi <code>id_rsa.pub</code></li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ clip &lt; ~/.ssh/id_rsa.pub
+</code></pre></div>
+<ul>
+<li>Tambahkan <code>public_key</code> ke akun GitHub.com
+<div class="full zoomable"><img src="/images/ssh-key.png"></div>
+Sumber Gambar-vc1: (Włodzimierz Gajda: 329)</li>
+<li>Buat <em>Repository</em> Baru
+<div class="full zoomable"><img src="/images/new-repo.png"></div>
+Sumber Gambar-vc2 : (Włodzimierz Gajda: 331)</li>
+<li>Kopi proyek yang sudah ada atau buat file baru contoh : <code>README.md</code>
+<div class="full zoomable"><img src="/images/new-repo-col.png"></div>
+Sumber Gambar-vc3 : (Włodzimierz Gajda: 332)<br \>
+Jika anda memutuskan untuk membuat file baru maka, anda lakukan perintah:</li>
+</ul>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ mkdir 12-03
+$ cd 12-03/
+$ touch README.md
+$ git add README.md
+$ git commit -m &quot;Pesan Perubahan&quot;
+$ git remote add origin git@github.com:&lt;username&gt;/12-03.git
+$ git push -u origin master
+</code></pre></div>
+<p>Jika anda memutuskan untuk mengkopi proyek yang sudah ada maka lakukan perintah:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ git add --all
+$ git commit -m &quot;Pesan Perubahan&quot;
+$ git remote add origin git@github.com:&lt;username&gt;/12-03.git
+$ git push -u origin master
+</code></pre></div>
+<p>Oke Selesai, Semoga bermanfaat, jika ada pertanyaan buatlah diskusi dan persoalan di alamat :
+<code>https://github.com/komunitas-cahunp/komunitas-cahunp.github.io/issues</code> dengan judul: <strong>Post Version Control #Subtitle-issue</strong>, contoh :<code>Post Version Control #Perintah git pull</code>.</p></li>
+</ul>
+
+<h3>Sumber</h3>
+
+<ul>
+<li>Włodzimierz, Gajda, 2013. <em>Git Recipes - A Problem-Solution Approach</em>, Poland:Apress.</li>
+<li>Scott, Chacon, 2009. <em>Pro Git</em>, <a href="https://github.s3.amazonaws.com/media/progit.en.pdf">https://github.s3.amazonaws.com/media/progit.en.pdf</a>, Visited 01/05/2015.</li>
+</ul>
+
+            
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="Version Control" data-related="cahunp">Tweet</a>
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+        </section>
+
+        <footer>
+            <address>
+               <img src="/images/Gz7G7rNc.jpg">
+                <p>Written by <strong><a rel="author" href="https://twitter.com/saifulindo" title="" target="_blank">M. Saiful Mukharom</a></strong><br>
+                <span class="muted">Teacher, Networking</span>
+                </p>
+            </address>
+
+        </footer>
+
+        
+        <section>
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'cahunp'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+        </section>
+        
+    </div>
+</article>
+
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2015 
+        
+        <nav>
+            <a href="http://cah.unpkediri.ac.id/">KCU</a> &middot;
+            <a href="/">Blog</a> &middot;
+            <a href="/events/">Events</a> &middot; 
+            <a href="/about/">About</a>
+        </nav>
+        
+        <nav class="social">
+            
+            <a href="https://twitter.com/cahunp" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
+            
+            
+            <a href="http://facebook.com/groups/cahunp" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
+                
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="icon icon-rss black"></i>
+            </a>
+        </nav>
+        <p>KCU theme by <a href="https://sendtoinc.com">Inc</a></p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+
+
+  <!--google analytics tracking code here-->
+
+
+
+
+</body>
+</html>
